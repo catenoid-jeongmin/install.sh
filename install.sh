@@ -25,7 +25,7 @@ git config --global user.email $useremail
 git config --global core.editor "code --wait"
 git config --global pull.ff true
 git config --global fetch.prune true
-git config --global push.autoSetupRemote "always"
+git config --global push.autoSetupRemote true
 echo "🎉 깃 설정 끝\!"
 
 # add ssh-agent to zprofile for booting
