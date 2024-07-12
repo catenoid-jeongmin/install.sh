@@ -27,7 +27,7 @@ spotlight(Command-스페이스 바) 실행해서 terminal.app 실행
 
 스크립트 실행
 
-`$ sh -c "$(curl -fsSL [raw github url]/install.sh)"`
+`$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/catenoid-jeongmin/install.sh/main/install.sh)"`
 
 - 입력값
   1. 깃용 email
