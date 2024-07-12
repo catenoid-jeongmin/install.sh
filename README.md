@@ -4,7 +4,17 @@
 
 spotlight(Command-스페이스 바) 실행해서 terminal.app 실행
 
-## 설정되는 것들
+## Installation
+
+스크립트 실행
+
+`$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/catenoid-jeongmin/install.sh/main/install.sh)"`
+
+- 입력값
+  1. 깃용 email
+  2. 깃용 username
+
+### 설정되는 것들
 
 - Brewfile의 패키지들(vscode확장 포함)
 - vscode 설정
@@ -23,15 +33,7 @@ spotlight(Command-스페이스 바) 실행해서 terminal.app 실행
 - p10k 설치
 - .zshrc 추가 설정
 
-## Installation
-
-스크립트 실행
-
-`$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/catenoid-jeongmin/install.sh/main/install.sh)"`
-
-- 입력값
-  1. 깃용 email
-  2. 깃용 username
+## 깃허브 SSH key 설정
 
 깃허브에서 사용할 ssh key를 클립보드에 복사되어 있으니 Settings / SSH and GPG keys 메뉴에서 New SSH key 버튼 누르고 붙여넣고 저장
 
