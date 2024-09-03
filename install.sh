@@ -15,7 +15,9 @@ export PATH=/opt/homebrew/bin:$PATH
 export GITHUB_RAW_URL="https://raw.githubusercontent.com/catenoid-jeongmin/install.sh/main"
 
 # run brew bundle
-curl -O "$GITHUB_RAW_URL/Brewfile"
+if [ ! -f "Brewfile" ]; then
+  curl -O "$GITHUB_RAW_URL/Brewfile"
+fi
 brew bundle --verbose --no-lock
 echo "🎉 맥주 양조 다 됨\!"
 
@@ -39,7 +41,10 @@ mkdir ~/Projects
 echo "🎉 ~/Projects 디렉토리 생성!"
 
 # set up vscode preferences and extensions
-curl -o ~/Library/Application\ Support/Code/User/settings.json "$GITHUB_RAW_URL/vscode_settings.json"
+if [ ! -f "vscode_settings.json" ]; then
+  curl -O "$GITHUB_RAW_URL/vscode_settings.json"
+fi
+mv vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json
 echo "🎉 vscode 설정 복사 완료\!"
 
 curl -o "iTerm State.itermexport" "$GITHUB_RAW_URL/iTerm2%20State.itermexport"
@@ -81,15 +86,16 @@ alias eks=eksctl
 EOF
 echo "🎉 zsh 설정 추가됨\!"
 
-# install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo "🎉 oh-my-zsh 설치. 닫혀도 놀라지마셔라\!"
-
 # p10k 설치
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # zsh 기본 테마값 변경
 sed -i '' 's|ZSH_THEME="robbyrussell"|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
+echo "🎉 powerlevel10k 설치됨\!"
 
-echo "🎉 완료~~ 🎉"
-
-
+read -p "oh-my-zsh을 설치합니다. 설치 후 창이 닫힙니다. 계속 하시겠습니까? (y/n): " user_input
+# install oh-my-zsh
+if [ "$user_input" = "y" ]; then
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+  echo "🎉 ~~완료~~ 🎉"
+fi
