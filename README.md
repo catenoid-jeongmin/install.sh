@@ -13,6 +13,10 @@ spotlight(Command-스페이스 바) 실행해서 terminal.app 실행
 - 입력값
   1. 깃용 email
   2. 깃용 username
+ 
+설치 시 Brewfile 과 vscode 셋팅파일을 자동으로 다운로드함.
+
+설치파일과 vscode설정을 바꾸고 싶다면 파일을 직접 다운로드 한 뒤 수정한 후 스크립트를 실행하면 됨.
 
 ### 설정되는 것들
 
