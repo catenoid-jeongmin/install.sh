@@ -4,6 +4,12 @@
 
 spotlight(Command-스페이스 바) 실행해서 terminal.app 실행
 
+## Prerequisite
+
+xcode command line tool 설치
+
+`$ xcode-select --install`
+
 ## Installation
 
 스크립트 실행
@@ -34,8 +40,6 @@ spotlight(Command-스페이스 바) 실행해서 terminal.app 실행
   5. push 시 원격 브랜치 자동 연결
 - 홈 디렉토리에 프로젝트 디렉토리 생성
 - zsh 확장커스텀 oh-my-zsh 설치
-- p10k 설치
-- .zshrc 추가 설정
 
 ## 깃허브 SSH key 설정
 
