@@ -41,6 +41,18 @@ spotlight(Command-스페이스 바) 실행해서 terminal.app 실행
 
 깃허브에서 사용할 ssh key를 클립보드에 복사되어 있으니 Settings / SSH and GPG keys 메뉴에서 New SSH key 버튼 누르고 붙여넣고 저장
 
-## iTerm2 profile 변경
+## iTerm2 설정
 
-General / Settings / Import All Settings and Data 를 눌러 .itermexport 파일 로드
+### 전체 설정 import
+
+General > Settings > Import All Settings and Data 를 눌러 iTerm2 State.itermexport 파일 추가
+
+프로필이나 키맵만 적용할 경우 아래 항목들만 적용
+
+### 사용자 프로필 import
+
+Profiles > Other Actions... > Import JSON Profile 를 눌러 ItermProfile.json 파일 추가
+
+### 키맵 import 
+
+Keys > Presets... > Imports... 를 눌러 iterm.itermkeymap 파일 추가
