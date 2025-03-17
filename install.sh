@@ -18,7 +18,7 @@ export GITHUB_RAW_URL="https://raw.githubusercontent.com/catenoid-jeongmin/insta
 if [ ! -f "Brewfile" ]; then
   curl -O "$GITHUB_RAW_URL/Brewfile"
 fi
-brew bundle --verbose --no-lock
+brew bundle --verbose
 echo "🎉 맥주 양조 다 됨\!"
 
 # set up git config
